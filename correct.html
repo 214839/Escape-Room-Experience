@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> YOU FOUND THE EXIT </title>
+<script src="Scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+PImage exit;
+void setup(){
+
+size( 1000,1000 );
+
+frameRate( 30 );
+exit = loadImage ("pic/exit.jpg");
+}
+
+
+void draw()
+{
+background(255,255,255);
+image (exit,0,0);
+fill(0,0,0);
+
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

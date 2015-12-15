@@ -1,0 +1,56 @@
+<html>
+<head>
+<title> Level 4 </title>
+<script src="Scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage lp;
+
+void setup(){
+
+size(1216,703);
+frameRate( 30 );
+
+lp = loadImage("Images/level53.png");
+
+}
+
+
+void draw()
+{
+	background(0,0,0);
+	
+	image(lp,0,0);
+	
+	fill(255,255,255);
+	
+	if (mousePressed == true){
+	
+		if (mouseX > 5 && mouseX < 134 && mouseY > 635 && mouseY < 703){
+		
+			link("level4(2).html");
+		
+		}
+	
+	}
+	
+	if (mouseX > 5 && mouseX < 134 && mouseY > 635 && mouseY < 703)
+	{
+		cursor(HAND);
+	}
+	else
+	{
+		cursor(ARROW);
+	}
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+

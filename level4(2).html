@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> level 4 Final </title>
+<script src="Scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage lp;
+
+void setup(){
+
+size(1216,703);
+frameRate( 30 );
+
+lp = loadImage("Images/level53final.png");
+
+}
+
+
+void draw()
+{
+	background(0,0,0);
+	image(lp,0,0);
+	fill(255,255,255);
+	text(mouseX,10,10);
+	text(mouseY,40,10);
+
+	if(mousePressed == true)
+	{
+		if(mouseButton == LEFT)
+		{
+			if(mouseX > 981 && mouseX < 1091 && mouseY > 634 && mouseY < 651)
+			{
+				link("4keypad.html")
+			}
+		}
+	}
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+

@@ -1,0 +1,479 @@
+<html>
+<head>
+<title> Level 2 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage hint;
+PImage bg;
+float rx;
+float ry;
+int bs = 10;
+boolean bover = false;
+boolean locked = false;
+boolean mouseD = true;
+float rdifx = 0.0; 
+float rdify = 0.0; 
+int ubn = 0;//unblock number
+int y = 1;
+int x = 0;
+int p = 0;
+
+
+void setup(){
+
+size( 1216, 703);
+frameRate( 30 );
+bg = loadImage ("pic/lev3bg.jpg");
+hint = loadImage ("pic/hint.png");
+
+//red box
+rx = width/2.0;
+ry = height/2.0;
+rectMode(CENTER_RADIUS);  
+}// void setup close braket 
+
+
+void draw()
+{
+background(0,0,0);
+image(bg,0,0,1216,703);
+// red  
+
+ if (mouseX > rx-bs && mouseX < rx+bs && 
+
+      mouseY > ry-bs && mouseY < ry+bs) 
+	{
+   		bover = true;  
+
+    if(!locked) 
+		{ 
+
+		  stroke(255); 
+
+		  fill(153);
+
+		} 
+
+  	} 
+  	else 
+		{
+
+		stroke(153);
+
+		fill(153);
+
+		bover = false;
+
+		}
+  // Draw the box
+	fill(255,0,0);
+  rect(rx, ry, bs, bs);
+  
+//image(bg,0,0);
+fill(255,255,255);
+
+
+
+//drag unblock number
+
+//1
+if (mouseD== true)
+	
+		{
+			if (rx> 530 && rx < 580 &&
+				ry > 203 && ry <250 && ubn == 0)
+			
+				{
+					x=x+1;
+					y=0;
+					p=p+1;
+				}
+		}
+	
+			
+	if (mouseD == false)
+	{
+		y=1;
+	}
+	
+if ( x==1 )
+	{
+		ubn=1;
+	}
+
+// reset ubn for x==1
+
+if (mouseD == true)
+	{
+		
+		if (rx < 455 && ubn == 1)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		
+	}
+
+if (mouseD == true)
+	{
+		
+		if (rx > 580 && ubn == 1)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		p=p+1;
+	}
+
+if (mouseD == true)
+	{
+		
+		if (ry < 127 && ubn == 1)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD== false)
+	{
+		y=1;
+		p=p+1;
+	}
+	
+if (mouseD == true)
+	{
+		
+		if (ry >257 && ubn == 1)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		p=p+1;
+	}
+
+//2
+if (mouseD == true)
+	{
+		
+		if (rx > 461 && rx < 510 &&
+			ry > 115 && ry <170 && ubn == 1)
+			
+			{
+				x=x+1;
+				y=0;
+				p=p+1;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+	}
+
+
+	
+if ( x==2 )
+	{
+		ubn=2;
+	} 
+
+// reset ubn for x==2
+
+if (mouseD == true)
+	{
+		
+		if (rx < 463 && ubn == 2)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		
+	}
+
+if (mouseD == true)
+	{
+		
+		if (rx > 712 && ubn == 2)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		p=p+1;
+	}
+
+if (mouseD == true)
+	{
+		
+		if (ry < 121 && ubn == 2)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD== false)
+	{
+		y=1;
+		p=p+1;
+	}
+	
+if (mouseD == true)
+	{
+		
+		if (ry >177 && ubn == 2)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		p=p+1;
+	}
+
+
+
+//3
+if (mousePressed == true)
+	{
+		
+		if (rx > 660 && rx < 700 &&
+			ry > 125 && ry <172 && ubn == 2)
+			
+			{
+				x=x+1;
+				y=0;
+				p=p+1;
+			}
+	}
+			
+	if (mousePressed == false)
+	{
+		y=1;
+	}
+
+
+
+if ( x==3 )
+	{
+		ubn=3;
+	}
+
+// reset ubn for x==3
+
+if (mouseD == true)
+	{
+		
+		if (rx < 653 && ubn == 3)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		
+	}
+
+if (mouseD == true)
+	{
+		
+		if (rx > 879 && ubn == 3)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		p=p+1;
+	}
+
+if (mouseD == true)
+	{
+		
+		if (ry < 96 && ubn == 3)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD== false)
+	{
+		y=1;
+		p=p+1;
+	}
+	
+if (mouseD == true)
+	{
+		
+		if (ry >175 && ubn == 3)
+			
+			{
+				y=0;
+				p=p+2;
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+		p=p+1;
+	}
+	
+//4
+if (mouseD == true)
+	{
+		
+		if (rx > 820 && rx < 870 &&
+			ry > 75 && ry <127 && ubn == 3)
+			
+			{
+				x=x+1;
+				y=0;
+				p=p+1
+			}
+	}
+			
+	if (mouseD == false)
+	{
+		y=1;
+	}
+	
+if ( x==4 )
+	{
+		ubn=4;
+	}
+	
+
+
+
+//reset unblock number
+
+if (p>x)
+{
+	ubn=0;
+}
+
+if (ubn==0)
+{
+	p=0;
+	x=0;
+}
+
+
+//hint
+
+if (mousePressed == true )
+	{
+		
+		if (mouseX >846 && mouseX < 883 &&
+			mouseY > 170 && mouseY < 213 )
+			
+			{
+				image(hint,815,140,100,100);
+			}
+	}
+
+// unblocked
+if (ubn == 4)
+{	
+	link ("c2.html");
+}
+
+}//void draw close braket
+
+
+
+void mousePressed() {
+//red
+  if(bover) { 
+
+    locked = true; 
+
+    fill(255, 255, 255);
+
+  } else {
+
+    locked = false;
+
+  }
+
+  rdifx = mouseX-rx; 
+
+  rdify = mouseY-ry; 
+  
+}//red void mousepressed braket
+
+
+
+void mouseDragged() {
+//red
+  if(locked) {
+
+    rx = mouseX-rdifx; 
+
+    ry = mouseY-rdify; 
+
+  }
+}
+
+void mouseReleased() {
+  locked = false;
+}
+
+	
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

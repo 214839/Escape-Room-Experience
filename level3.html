@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> Escape Room </title>
+<script src="Scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage cover;
+
+void setup(){
+
+size(1216,703);
+frameRate( 30 );
+
+tp = loadImage("Images/FinalLevel3.png");
+
+}
+
+
+void draw()
+{
+	background(0,0,0);
+	image(tp,0,0); 
+	fill(255,255,255);
+
+
+	if(mousePressed == true && mouseButton == LEFT)
+	{
+		if(mouseX > 519 && mouseX < 604 && mouseY > 396 && mouseY < 493)
+		{
+			link("level2.html")
+		}
+		
+		if(mouseX > 647 && mouseX < 731 && mouseY > 396 && mouseY < 493)
+		{
+			link("c3.html")
+		}
+	}
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+
